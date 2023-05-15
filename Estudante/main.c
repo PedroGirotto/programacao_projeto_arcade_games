@@ -28,8 +28,14 @@
         //fazer: lógica de reniciar o jogo
 
     fazer: criar a lógica do gousmas wars
-        ! parou aqui o desenvolvimento
-        * ainda não desenvolvido
+        fazer lógica para escolher o jogador
+        fazer logica do turno do jogado
+        fazer logia da validação da opção escolhida
+        fazer logica do ataque e da validação do alvo
+        fazer lógica da morte
+        fazer lógica da divisão e da validação
+        fazer lógica da vitória ou derrota do jogador
+        fazer lógica de reniciar o jogo
 */
 
 int main()
@@ -38,17 +44,16 @@ int main()
     char escolhaMenuPrincipal;
     char estarJogando;
     char alternativaInvalida;
+    char nomePrimeiroJogador[50];
+    char nomeSegundoJogador[50];
+    char temp[50];
+    char escolhaJogador;
     char lixo; // * propósito de travar a tela
 
     // * variáveis para o primeiro jogo
     char alternativaEscolhida;
 
     // * variáveis para o segundo jogo
-    char nomePrimeiroJogador[50];
-    char nomeSegundoJogador[50];
-    char temp[50];
-    char escolhaPrimeiroJogador;
-    char escolhaSegundoJogador;
     char spritePrimeiraCaixa;
     char spriteSegundaCaixa;
     char spriteTerceiraCaixa;
@@ -58,6 +63,10 @@ int main()
     char caixaCobra;
 
     // * variáveis para o terceiro jogo
+    int vidaGousmaAPrimeiroJogador;
+    int vidaGousmaBPrimeiroJogador;
+    int vidaGousmaASegundpJogador;
+    int vidaGousmaASegundoJogador;
 
     // * configurações
     srand(time(NULL));
@@ -392,19 +401,19 @@ int main()
                             printf("\t ### TURNO %s ### \n", nomePrimeiroJogador);
                             printf("\t %c\t%c\t%c\t%c\t%c\n", spritePrimeiraCaixa, spriteSegundaCaixa, spriteTerceiraCaixa, spriteQuartaCaixa, spriteQuintaCaixa);
                             printf("\t Escolha uma caixa de 1 a 5: ");
-                            scanf(" %c", &escolhaPrimeiroJogador);
+                            scanf(" %c", &escolhaJogador);
                         }
-                        while(escolhaPrimeiroJogador <  '1' || escolhaPrimeiroJogador > '5');
+                        while(escolhaJogador <  '1' || escolhaJogador > '5');
 
                         // * primeiro jogador escolhido achou o botão
-                        if(escolhaPrimeiroJogador == caixaBotao)
+                        if(escolhaJogador == caixaBotao)
                         {
                             printf("\t ### PARABENS %s ###\n", nomePrimeiroJogador);
                             printf("\t ### Você ganhou! ###\n");
                             estarJogando = '0';
                         }
                         // * primeiro jogador escolhido achou a cobra
-                        else if(escolhaPrimeiroJogador == caixaCobra)
+                        else if(escolhaJogador == caixaCobra)
                         {
                             printf("\t !!! ESSA NÃO %s !!!\n", nomePrimeiroJogador);
                             printf("\t !!! Você achou a cobra !!!\n");
@@ -412,35 +421,35 @@ int main()
                         }
                         // * primeiro jogador escolhido não achou a cobra e nem o botão
                         // * logo modificar a sprite da caixa
-                        else if(escolhaPrimeiroJogador == '1' && spritePrimeiraCaixa == 'O')
+                        else if(escolhaJogador == '1' && spritePrimeiraCaixa == 'O')
                         {
                             printf("\t\t Caixa estar vazia\n");
                             spritePrimeiraCaixa = 'X';
                         }
                         // * primeiro jogador escolhido não achou a cobra e nem o botão
                         // * logo modificar a sprite da caixa
-                        else if(escolhaPrimeiroJogador == '2' && spriteSegundaCaixa == 'O')
+                        else if(escolhaJogador == '2' && spriteSegundaCaixa == 'O')
                         {
                             printf("\t\t Caixa estar vazia\n");
                             spriteSegundaCaixa = 'X';
                         }
                         // * primeiro jogador escolhido não achou a cobra e nem o botão
                         // * logo modificar a sprite da caixa
-                        else if(escolhaPrimeiroJogador == '3' && spriteTerceiraCaixa == 'O')
+                        else if(escolhaJogador == '3' && spriteTerceiraCaixa == 'O')
                         {
                             printf("\t\t Caixa estar vazia\n");
                             spriteTerceiraCaixa = 'X';
                         }
                         // * primeiro jogador escolhido não achou a cobra e nem o botão
                         // * logo modificar a sprite da caixa
-                        else if(escolhaPrimeiroJogador == '4' && spriteQuartaCaixa == 'O')
+                        else if(escolhaJogador == '4' && spriteQuartaCaixa == 'O')
                         {
                             printf("\t\t Caixa estar vazia\n");
                             spriteQuartaCaixa = 'X';
                         }
                         // * primeiro jogador escolhido não achou a cobra e nem o botão
                         // * logo modificar a sprite da caixa
-                        else if(escolhaPrimeiroJogador == '5' && spriteQuintaCaixa == 'O')
+                        else if(escolhaJogador == '5' && spriteQuintaCaixa == 'O')
                         {
                             printf("\t\t Caixa estar vazia\n");
                             spriteQuintaCaixa = 'X';
@@ -470,10 +479,37 @@ int main()
                     printf("\t Escolha: ");
                     scanf(" %c", &estarJogando);
 
-                    // * comando invalido, reniciar o segundo jogo
+                    // * comando invalido, reniciar o terceiro jogo
                     if(estarJogando != '0' && estarJogando != '1')
                     {
                         estarJogando = '1';
+                    }
+
+                    // * usuário escolheu jogar
+                    system("cls || clear");
+
+                    printf("\t Digite o nome do primeiro jogador: ");
+                    getchar();
+                    fgets(nomePrimeiroJogador, 50, stdin);
+                    nomePrimeiroJogador[strcspn(nomePrimeiroJogador, "\n")] = '\0'; // * remover o \n do nome
+
+                    printf("\t Digite o nome do segundo jogador: ");
+                    fgets(nomeSegundoJogador, 50, stdin);
+                    nomeSegundoJogador[strcspn(nomeSegundoJogador, "\n")] = '\0'; // * remover o \n do nome
+
+                    // * segundo jogador começa
+                    if(rand() % 2 == 1)
+                    {
+                        // * trocando o nome do segundo para o primeiro e o primeiro para o segundo
+                        printf("\t Segundo jogador começa jogando!\n");
+                        strcpy(temp, nomePrimeiroJogador);
+                        strcpy(nomePrimeiroJogador, nomeSegundoJogador);
+                        strcpy(nomeSegundoJogador, temp);
+                    }
+                    // * primeiro jogador começa
+                    else
+                    {
+                        printf("\t Primeiro jogador começa jogando!\n");
                     }
 
                 }
@@ -484,6 +520,31 @@ int main()
 
             // * terceiro jogo selecionado
             case '3':
+                estarJogando = '1';
+                while(estarJogando == '1')
+                {
+                    system("cls || clear");
+                    printf("----- GOUSMAS WAR ----- \n");
+                    printf("\t TEXTO EXPLICANDO O JOGO! \n");
+                    printf("\t\t Começar jogo?\n");
+                    printf("\t\t 1. Sim\t 0. Não\n");
+                    printf("\t Escolha: ");
+                    scanf(" %c", &estarJogando);
+
+                    // * finalizar jogo e voltar para o menu principal
+                    if(estarJogando == '0')
+                    {
+                        continue;
+                    }
+                    // * comando invalido, fazer a pergunta novamente
+                    else if(estarJogando != '1')
+                    {
+                        estarJogando = '1';
+                        printf("\t !!!!! Comando inválido !!!!! \n");
+                        scanf(" %c", &lixo);
+                        continue;
+                    }
+                }
                 break;
 
 
@@ -500,4 +561,6 @@ int main()
         }
 
     } while(escolhaMenuPrincipal != '4');
+
+    return 0;
 }
