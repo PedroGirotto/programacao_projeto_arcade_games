@@ -27,15 +27,15 @@
         //fazer: lógica de vitoria ou derrota do jogador
         //fazer: lógica de reniciar o jogo
 
-    fazer: criar a lógica do gousmas wars
-        fazer lógica para escolher o jogador
-        fazer logica do turno do jogado
-        fazer logia da validação da opção escolhida
-        fazer logica do ataque e da validação do alvo
-        fazer lógica da morte
-        fazer lógica da divisão e da validação
-        fazer lógica da vitória ou derrota do jogador
-        fazer lógica de reniciar o jogo
+    //fazer: criar a lógica do gousmas wars
+        //fazer lógica para escolher o jogador
+        //fazer logica do turno do jogado
+        //fazer logia da validação da opção escolhida
+        //fazer logica do ataque e da validação do alvo
+        //fazer lógica da morte
+        //fazer lógica da divisão e da validação
+        //fazer lógica da vitória ou derrota do jogador
+        //fazer lógica de reniciar o jogo
 */
 
 int main()
@@ -65,8 +65,9 @@ int main()
     // * variáveis para o terceiro jogo
     int vidaGousmaAPrimeiroJogador;
     int vidaGousmaBPrimeiroJogador;
-    int vidaGousmaASegundpJogador;
     int vidaGousmaASegundoJogador;
+    int vidaGousmaBSegundoJogador;
+    int vidaTransferencia;
 
     // * configurações
     srand(time(NULL));
@@ -111,7 +112,7 @@ int main()
                     {
                         estarJogando = '1';
                         printf("\t !!!!! Comando inválido !!!!! \n");
-                        scanf("%c", &lixo);
+                        scanf(" %c", &lixo);
                         continue;
                     }
 
@@ -134,7 +135,7 @@ int main()
                         {
                             alternativaInvalida = '0';
                             printf("\t Resposta Correta! \n");
-                            scanf("%c", &lixo);
+                            scanf(" %c", &lixo);
                         }
                         // * alternativa incorreta
                         else if(alternativaEscolhida == 'a' || alternativaEscolhida == 'c' || alternativaEscolhida == 'd')
@@ -142,14 +143,14 @@ int main()
                             alternativaInvalida = '0';
                             printf("\t Responsta errada!\n");
                             printf("\t A resposta correta é 'b'! \n");
-                            scanf("%c", &lixo);
+                            scanf(" %c", &lixo);
                         }
                         // * alternativa invalida
                         else
                         {
                             alternativaInvalida = '1';
                             printf("\t !!!!! Comando inválido !!!!!\n");
-                            scanf("%c", &lixo);
+                            scanf(" %c", &lixo);
                         }
                     } while(alternativaInvalida == '1');
                     
@@ -171,7 +172,7 @@ int main()
                         {
                             alternativaInvalida = '0';
                             printf("\t Resposta Correta! \n");
-                            scanf("%c", &lixo);
+                            scanf(" %c", &lixo);
                         }
                         // * alternativa incorreta
                         else if(alternativaEscolhida == 'a' || alternativaEscolhida == 'c' || alternativaEscolhida == 'd')
@@ -179,14 +180,14 @@ int main()
                             alternativaInvalida = '0';
                             printf("\t Responsta errada!\n");
                             printf("\t A resposta correta é 'b'! \n");
-                            scanf("%c", &lixo);
+                            scanf(" %c", &lixo);
                         }
                         // * alternativa invalida
                         else
                         {
                             alternativaInvalida = '1';
                             printf("\t !!!!! Comando inválido !!!!!\n");
-                            scanf("%c", &lixo);
+                            scanf(" %c", &lixo);
                         }
                     } while(alternativaInvalida == '1');
 
@@ -208,7 +209,7 @@ int main()
                         {
                             alternativaInvalida = '0';
                             printf("\t Resposta Correta! \n");
-                            scanf("%c", &lixo);
+                            scanf(" %c", &lixo);
                         }
                         // * alternativa incorreta
                         else if(alternativaEscolhida == 'a' || alternativaEscolhida == 'c' || alternativaEscolhida == 'd')
@@ -216,14 +217,14 @@ int main()
                             alternativaInvalida = '0';
                             printf("\t Responsta errada!\n");
                             printf("\t A resposta correta é 'b'! \n");
-                            scanf("%c", &lixo);
+                            scanf(" %c", &lixo);
                         }
                         // * alternativa invalida
                         else
                         {
                             alternativaInvalida = '1';
                             printf("\t !!!!! Comando inválido !!!!!\n");
-                            scanf("%c", &lixo);
+                            scanf(" %c", &lixo);
                         }
                     } while(alternativaInvalida == '1');
 
@@ -245,7 +246,7 @@ int main()
                         {
                             alternativaInvalida = '0';
                             printf("\t Resposta Correta! \n");
-                            scanf("%c", &lixo);
+                            scanf(" %c", &lixo);
                         }
                         // * alternativa incorreta
                         else if(alternativaEscolhida == 'a' || alternativaEscolhida == 'c' || alternativaEscolhida == 'd')
@@ -253,14 +254,14 @@ int main()
                             alternativaInvalida = '0';
                             printf("\t Responsta errada!\n");
                             printf("\t A resposta correta é 'b'! \n");
-                            scanf("%c", &lixo);
+                            scanf(" %c", &lixo);
                         }
                         // * alternativa invalida
                         else
                         {
                             alternativaInvalida = '1';
                             printf("\t !!!!! Comando inválido !!!!!\n");
-                            scanf("%c", &lixo);
+                            scanf(" %c", &lixo);
                         }
                     } while(alternativaInvalida == '1');
 
@@ -282,7 +283,7 @@ int main()
                         {
                             alternativaInvalida = '0';
                             printf("\t Resposta Correta! \n");
-                            scanf("%c", &lixo);
+                            scanf(" %c", &lixo);
                         }
                         // * alternativa incorreta
                         else if(alternativaEscolhida == 'a' || alternativaEscolhida == 'c' || alternativaEscolhida == 'd')
@@ -290,14 +291,14 @@ int main()
                             alternativaInvalida = '0';
                             printf("\t Responsta errada!\n");
                             printf("\t A resposta correta é 'b'! \n");
-                            scanf("%c", &lixo);
+                            scanf(" %c", &lixo);
                         }
                         // * alternativa invalida
                         else
                         {
                             alternativaInvalida = '1';
                             printf("\t !!!!! Comando inválido !!!!!\n");
-                            scanf("%c", &lixo);
+                            scanf(" %c", &lixo);
                         }
                     } while(alternativaInvalida == '1');
 
@@ -479,39 +480,11 @@ int main()
                     printf("\t Escolha: ");
                     scanf(" %c", &estarJogando);
 
-                    // * comando invalido, reniciar o terceiro jogo
+                    // * comando invalido, reniciar o segundo jogo
                     if(estarJogando != '0' && estarJogando != '1')
                     {
                         estarJogando = '1';
                     }
-
-                    // * usuário escolheu jogar
-                    system("cls || clear");
-
-                    printf("\t Digite o nome do primeiro jogador: ");
-                    getchar();
-                    fgets(nomePrimeiroJogador, 50, stdin);
-                    nomePrimeiroJogador[strcspn(nomePrimeiroJogador, "\n")] = '\0'; // * remover o \n do nome
-
-                    printf("\t Digite o nome do segundo jogador: ");
-                    fgets(nomeSegundoJogador, 50, stdin);
-                    nomeSegundoJogador[strcspn(nomeSegundoJogador, "\n")] = '\0'; // * remover o \n do nome
-
-                    // * segundo jogador começa
-                    if(rand() % 2 == 1)
-                    {
-                        // * trocando o nome do segundo para o primeiro e o primeiro para o segundo
-                        printf("\t Segundo jogador começa jogando!\n");
-                        strcpy(temp, nomePrimeiroJogador);
-                        strcpy(nomePrimeiroJogador, nomeSegundoJogador);
-                        strcpy(nomeSegundoJogador, temp);
-                    }
-                    // * primeiro jogador começa
-                    else
-                    {
-                        printf("\t Primeiro jogador começa jogando!\n");
-                    }
-
                 }
 
                 estarJogando = '0';
@@ -543,6 +516,330 @@ int main()
                         printf("\t !!!!! Comando inválido !!!!! \n");
                         scanf(" %c", &lixo);
                         continue;
+                    }
+
+                    // * usuário escolheu jogar
+                    system("cls || clear");
+
+                    printf("\t Digite o nome do primeiro jogador: ");
+                    getchar();
+                    fgets(nomePrimeiroJogador, 50, stdin);
+                    nomePrimeiroJogador[strcspn(nomePrimeiroJogador, "\n")] = '\0'; // * remover o \n do nome
+
+                    printf("\t Digite o nome do segundo jogador: ");
+                    fgets(nomeSegundoJogador, 50, stdin);
+                    nomeSegundoJogador[strcspn(nomeSegundoJogador, "\n")] = '\0'; // * remover o \n do nome
+
+                    // * segundo jogador começa
+                    if(rand() % 2 == 1)
+                    {
+                        // * trocando o nome do segundo para o primeiro e o primeiro para o segundo
+                        printf("\t Segundo jogador começa jogando!\n");
+                        strcpy(temp, nomePrimeiroJogador);
+                        strcpy(nomePrimeiroJogador, nomeSegundoJogador);
+                        strcpy(nomeSegundoJogador, temp);
+                    }
+                    // * primeiro jogador começa
+                    else
+                    {
+                        printf("\t Primeiro jogador começa jogando!\n");
+                    }
+                    scanf(" %c", &lixo);
+
+                    // * Setando as variáveis
+                    vidaGousmaAPrimeiroJogador = 1;
+                    vidaGousmaBPrimeiroJogador = 1;
+                    vidaGousmaASegundoJogador = 1;
+                    vidaGousmaBSegundoJogador = 1;
+
+                    while((vidaGousmaAPrimeiroJogador > 0 || vidaGousmaBPrimeiroJogador > 0) \
+                          && (vidaGousmaASegundoJogador > 0 || vidaGousmaBSegundoJogador > 0))
+                    {
+                        // * turno primeiro jogador
+                        do
+                        {
+                            system("cls || clear");
+                            printf("\t %s\n", nomePrimeiroJogador);
+                            printf("\t #####################\n");
+                            printf("\t # A       # B       #\n");
+                            printf("\t #    %d    #    %d    #\n", vidaGousmaAPrimeiroJogador, vidaGousmaBPrimeiroJogador);
+                            printf("\t #####################\n\n");
+                            printf("\t %s\n", nomeSegundoJogador);
+                            printf("\t #####################\n");
+                            printf("\t # A       # B       #\n");
+                            printf("\t #    %d    #    %d    #\n", vidaGousmaASegundoJogador, vidaGousmaBSegundoJogador);
+                            printf("\t #####################\n\n");
+                            printf("\t Jogador: %s\n", nomePrimeiroJogador);
+                            printf("\t\t 1- Atacar\n");
+                            printf("\t\t 2- Dividir\n");
+                            printf("\t Escolha: ");
+                            scanf(" %c", &escolhaJogador);
+
+                            if(escolhaJogador == '1')
+                            {
+                                printf("\t\t Escolha a Gousma para atacar: ");
+                                scanf(" %c", &escolhaJogador);
+                                if(escolhaJogador == 'A' && vidaGousmaAPrimeiroJogador > 0)
+                                {
+                                    printf("\t\t Escolha a Gousma alvo: ");
+                                    scanf(" %c", &escolhaJogador);
+                                    if(escolhaJogador == 'A' && vidaGousmaASegundoJogador > 0)
+                                    {
+                                        printf("\t\t\t ATAQUE!!!\n");
+                                        vidaGousmaASegundoJogador += vidaGousmaAPrimeiroJogador;
+                                    }
+                                    else if(escolhaJogador == 'B' && vidaGousmaBSegundoJogador > 0)
+                                    {
+                                        printf("\t\t\t ATAQUE!!!\n");
+                                        vidaGousmaBSegundoJogador += vidaGousmaAPrimeiroJogador;
+                                    }
+                                    else
+                                    {
+                                        printf("\t\t\t !!! ALVO INVALIDO !!!\n");
+                                        escolhaJogador == '1';
+                                    }
+                                }
+                                else if(escolhaJogador == 'B' && vidaGousmaBPrimeiroJogador > 0)
+                                {
+                                    printf("\t\t Escolha a Gousma alvo: ");
+                                    scanf(" %c", &escolhaJogador);
+                                    if(escolhaJogador == 'A' && vidaGousmaASegundoJogador > 0)
+                                    {
+                                        printf("\t\t\t ATAQUE!!!\n");
+                                        vidaGousmaASegundoJogador += vidaGousmaBPrimeiroJogador;
+                                    }
+                                    else if(escolhaJogador == 'B' && vidaGousmaBSegundoJogador > 0)
+                                    {
+                                        printf("\t\t\t ATAQUE!!!\n");
+                                        vidaGousmaBSegundoJogador += vidaGousmaBPrimeiroJogador;
+                                    }
+                                    else
+                                    {
+                                        printf("\t\t\t !!! ALVO INVALIDO !!!\n");
+                                        escolhaJogador == '1';
+                                    }
+                                }
+                                else
+                                {
+                                    printf("\t\t\t !!! Ação Inválida !!!\n");
+                                    escolhaJogador = '1';
+                                }
+                            }
+                            else if(escolhaJogador == '2')
+                            {
+                                printf("\t\t Escolha a Gousma para dividir: ");
+                                scanf(" %c", &escolhaJogador);
+                                if(escolhaJogador == 'A' && vidaGousmaAPrimeiroJogador > 0)
+                                {
+                                    printf("\t\t Digite o quanto será transferido: ");
+                                    scanf("%d", &vidaTransferencia);
+                                    if(vidaGousmaAPrimeiroJogador-vidaTransferencia >= 0)
+                                    {
+                                        vidaGousmaAPrimeiroJogador -= vidaTransferencia;
+                                        vidaGousmaBPrimeiroJogador += vidaTransferencia;
+                                    }
+                                    else
+                                    {
+                                        printf("\t\t\t !!! Quantidade Inválida !!!\n");
+                                        escolhaJogador = '1';
+                                    }
+                                }
+                                else if(escolhaJogador == 'B' && vidaGousmaBPrimeiroJogador > 0)
+                                {
+                                    printf("\t\t Digite o quanto será transferido: ");
+                                    scanf("%d", &vidaTransferencia);
+                                    if(vidaGousmaBPrimeiroJogador-vidaTransferencia >= 0)
+                                    {
+                                        vidaGousmaBPrimeiroJogador -= vidaTransferencia;
+                                        vidaGousmaAPrimeiroJogador += vidaTransferencia;
+                                    }
+                                    else
+                                    {
+                                        printf("\t\t\t !!! Quantidade Inválida !!!\n");
+                                        escolhaJogador = '1';
+                                    }
+                                }
+                                else
+                                {
+                                    printf("\t\t\t !!! Alvo Inválido !!!\n");
+                                    escolhaJogador = '1';
+                                }
+                            }
+                            else
+                            {
+                                printf("\t\t\t !!! Comando Inválido !!!\n");
+                                escolhaJogador = '1';
+                            }
+                            scanf(" %c", &lixo);
+                        }
+                        while(escolhaJogador != 'A' && escolhaJogador != 'B');
+                        
+                        // * verificar se alguem morreu
+                        if(vidaGousmaAPrimeiroJogador > 5)
+                            vidaGousmaAPrimeiroJogador = 0;
+
+                        if(vidaGousmaBPrimeiroJogador > 5)
+                            vidaGousmaBPrimeiroJogador = 0;
+                        
+                        if(vidaGousmaASegundoJogador > 5)
+                            vidaGousmaASegundoJogador = 0;
+                        
+                        if(vidaGousmaBSegundoJogador > 5)
+                            vidaGousmaBSegundoJogador = 0;
+
+                        // * turno segundo jogador
+                        do
+                        {
+                            system("cls || clear");
+                            printf("\t %s\n", nomePrimeiroJogador);
+                            printf("\t #####################\n");
+                            printf("\t # A       # B       #\n");
+                            printf("\t #    %d    #    %d    #\n", vidaGousmaAPrimeiroJogador, vidaGousmaBPrimeiroJogador);
+                            printf("\t #####################\n\n");
+                            printf("\t %s\n", nomeSegundoJogador);
+                            printf("\t #####################\n");
+                            printf("\t # A       # B       #\n");
+                            printf("\t #    %d    #    %d    #\n", vidaGousmaASegundoJogador, vidaGousmaBSegundoJogador);
+                            printf("\t #####################\n\n");
+                            printf("\t Jogador: %s\n", nomeSegundoJogador);
+                            printf("\t\t 1- Atacar\n");
+                            printf("\t\t 2- Dividir\n");
+                            printf("\t Escolha: ");
+                            scanf(" %c", &escolhaJogador);
+
+                            if(escolhaJogador == '1')
+                            {
+                                printf("\t\t Escolha a Gousma para atacar: ");
+                                scanf(" %c", &escolhaJogador);
+                                if(escolhaJogador == 'A' && vidaGousmaASegundoJogador > 0)
+                                {
+                                    printf("\t\t Escolha a Gousma alvo: ");
+                                    scanf(" %c", &escolhaJogador);
+                                    if(escolhaJogador == 'A' && vidaGousmaAPrimeiroJogador > 0)
+                                    {
+                                        printf("\t\t\t ATAQUE!!!\n");
+                                        vidaGousmaAPrimeiroJogador += vidaGousmaASegundoJogador;
+                                    }
+                                    else if(escolhaJogador == 'B' && vidaGousmaBPrimeiroJogador > 0)
+                                    {
+                                        printf("\t\t\t ATAQUE!!!\n");
+                                        vidaGousmaBPrimeiroJogador += vidaGousmaASegundoJogador;
+                                    }
+                                    else
+                                    {
+                                        printf("\t\t\t !!! ALVO INVALIDO !!!\n");
+                                        escolhaJogador == '1';
+                                    }
+                                }
+                                else if(escolhaJogador == 'B' && vidaGousmaBSegundoJogador > 0)
+                                {
+                                    printf("\t\t Escolha a Gousma alvo: ");
+                                    scanf(" %c", &escolhaJogador);
+                                    if(escolhaJogador == 'A' && vidaGousmaAPrimeiroJogador > 0)
+                                    {
+                                        printf("\t\t\t ATAQUE!!!\n");
+                                        vidaGousmaAPrimeiroJogador += vidaGousmaBSegundoJogador;
+                                    }
+                                    else if(escolhaJogador == 'B' && vidaGousmaBSegundoJogador > 0)
+                                    {
+                                        printf("\t\t\t ATAQUE!!!\n");
+                                        vidaGousmaBPrimeiroJogador += vidaGousmaBSegundoJogador;
+                                    }
+                                    else
+                                    {
+                                        printf("\t\t\t !!! ALVO INVALIDO !!!\n");
+                                        escolhaJogador == '1';
+                                    }
+                                }
+                                else
+                                {
+                                    printf("\t\t\t !!! Ação Inválida !!!\n");
+                                    escolhaJogador = '1';
+                                }
+                            }
+                            else if(escolhaJogador == '2')
+                            {
+                                printf("\t\t Escolha a Gousma para dividir: ");
+                                scanf(" %c", &escolhaJogador);
+                                if(escolhaJogador == 'A' && vidaGousmaASegundoJogador > 0)
+                                {
+                                    printf("\t\t Digite o quanto será transferido: ");
+                                    scanf("%d", &vidaTransferencia);
+                                    if(vidaGousmaASegundoJogador-vidaTransferencia >= 0)
+                                    {
+                                        vidaGousmaASegundoJogador -= vidaTransferencia;
+                                        vidaGousmaBSegundoJogador += vidaTransferencia;
+                                    }
+                                    else
+                                    {
+                                        printf("\t\t\t !!! Quantidade Inválida !!!\n");
+                                        escolhaJogador = '1';
+                                    }
+                                }
+                                else if(escolhaJogador == 'B' && vidaGousmaBSegundoJogador > 0)
+                                {
+                                    printf("\t\t Digite o quanto será transferido: ");
+                                    scanf("%d", &vidaTransferencia);
+                                    if(vidaGousmaBSegundoJogador-vidaTransferencia >= 0)
+                                    {
+                                        vidaGousmaBSegundoJogador -= vidaTransferencia;
+                                        vidaGousmaASegundoJogador += vidaTransferencia;
+                                    }
+                                    else
+                                    {
+                                        printf("\t\t\t !!! Quantidade Inválida !!!\n");
+                                        escolhaJogador = '1';
+                                    }
+                                }
+                                else
+                                {
+                                    printf("\t\t\t !!! Alvo Inválido !!!\n");
+                                    escolhaJogador = '1';
+                                }
+                            }
+                            else
+                            {
+                                printf("\t\t\t !!! Comando Inválido !!!\n");
+                                escolhaJogador = '1';
+                            }
+
+                            scanf(" %c", &lixo);
+                        }
+                        while(escolhaJogador != 'A' && escolhaJogador != 'B');
+
+                        // * verificar se alguem morreu
+                        if(vidaGousmaAPrimeiroJogador > 5)
+                            vidaGousmaAPrimeiroJogador = 0;
+
+                        if(vidaGousmaBPrimeiroJogador > 5)
+                            vidaGousmaBPrimeiroJogador = 0;
+                        
+                        if(vidaGousmaASegundoJogador > 5)
+                            vidaGousmaASegundoJogador = 0;
+                        
+                        if(vidaGousmaBSegundoJogador > 5)
+                            vidaGousmaBSegundoJogador = 0;
+                    }
+
+                    if(vidaGousmaAPrimeiroJogador <= 0 && vidaGousmaBPrimeiroJogador <= 0)
+                        printf("\t\t\t ### %s GANHOU ###\n", nomeSegundoJogador);
+                    else if(vidaGousmaASegundoJogador <= 0 && vidaGousmaBSegundoJogador <= 0)
+                        printf("\t\t\t ### %s GANHOU ###\n", nomePrimeiroJogador);
+
+                    scanf(" %c", &lixo);
+
+                    // * acabou o jogo, perguntar se quer jogar novamente
+                    system("cls || clear");
+                    printf("----- FIM DO JOGO -----\n");
+                    printf("\t Deseja jogar novamente?\n");
+                    printf("\t\t 1. Sim\t 0. Não\n");
+                    printf("\t Escolha: ");
+                    scanf(" %c", &estarJogando);
+
+                    // * comando invalido, reniciar o terceiro jogo
+                    if(estarJogando != '0' && estarJogando != '1')
+                    {
+                        estarJogando = '1';
                     }
                 }
                 break;
