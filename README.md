@@ -1,4 +1,4 @@
-# Programação 01 - Projeto 01
+# PROJETO - ARCADE GAMES
 
 ## INTRODUÇÃO   
    No universo da programação, os projetos de desenvolvimento de jogos são considerados os mais difíceis devido à quantidade de detalhes e regras que devem ser respeitadas. Entretanto, quando finalizados, trazem grande satisfação.
